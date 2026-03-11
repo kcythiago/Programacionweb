@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Café Quinto Sentido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="logo">
+            <h1>☕ Quinto Sentido</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="¿En qué te podemos ayudar?">
+        </div>
+        <div class="user-options">
+            
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="menu.html">Nuestro Menú</a>
+        <a href="coworking.html">Planes Coworking</a>
+        <a href="nosotros.html">Acerca de Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main class="contenedor" style="display: flex; gap: 40px; justify-content: space-between; flex-wrap: wrap; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+        
+        <section style="flex: 1; min-width: 300px;">
+            <h2 class="titulo-seccion" style="text-align: left; margin-bottom: 20px;">📍 Ponte en contacto</h2>
+            <p style="color: #555; line-height: 1.6; margin-bottom: 20px;">
+                ¿Tienes alguna duda sobre nuestros granos de café, quieres reservar una sala de coworking o simplemente quieres saludarnos? Escríbenos y te responderemos al instante.
+            </p>
+            
+            <div style="margin-bottom: 15px;">
+                <strong>📍 Dirección:</strong><br>
+                <span style="color: #555;">Calle Falsa 123, Barrio Universitario, Bogotá.</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>📞 Teléfono:</strong><br>
+                <span style="color: #555;">+57 300 123 4567</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>✉️ Correo:</strong><br>
+                <span style="color: #555;">hola@cafequintosentido.com</span>
+            </div>
+            
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mapa de ubicación" style="width: 100%; border-radius: 10px; margin-top: 20px;">
+        </section>
+
+        <section style="flex: 1; min-width: 300px;">
+            <h2 class="titulo-seccion" style="text-align: left; margin-bottom: 20px;">✉️ Envíanos un mensaje</h2>
+            
+            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                
+                <div>
+                    <label for="nombre" style="font-weight: bold; color: #333;">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-top: 5px;">
+                </div>
+
+                <div>
+                    <label for="correo" style="font-weight: bold; color: #333;">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-top: 5px;">
+                </div>
+
+                <div>
+                    <label for="asunto" style="font-weight: bold; color: #333;">Asunto:</label>
+                    <select id="asunto" name="asunto" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-top: 5px;">
+                        <option value="reserva">Reserva de Coworking</option>
+                        <option value="pedidos">Pedidos de Café</option>
+                        <option value="otros">Otras consultas</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensaje" style="font-weight: bold; color: #333;">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-top: 5px; resize: none;"></textarea>
+                </div>
+
+                <button type="submit" class="btn-comprar" style="border: none; cursor: pointer; font-size: 16px;">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Café Quinto Sentido. Proyecto ACA Programación Web - CUN.</p>
+    </footer>
+
+</body>
+</html>

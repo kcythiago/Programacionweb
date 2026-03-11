@@ -1,0 +1,231 @@
+/* Importamos una fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+/* Variables de color para mantener consistencia */
+:root {
+    --rojo-tinto: #8b152e;
+    --rojo-oscuro: #610d1f;
+    --crema: #fdf8f4;
+    --dorado: #d4af37;
+    --texto: #333333;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--texto);
+}
+
+/* --- BARRA SUPERIOR --- */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--blanco);
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.logo h1 {
+    color: var(--rojo-tinto);
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.search-bar input {
+    padding: 12px 20px;
+    width: 400px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: var(--rojo-tinto);
+}
+
+/* Botones de acción superior */
+.btn-login {
+    background-color: var(--rojo-tinto);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--rojo-oscuro);
+    box-shadow: 0 4px 8px rgba(139, 21, 46, 0.3);
+    transform: translateY(-2px);
+}
+
+/* --- NAVEGACIÓN PRINCIPAL --- */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--blanco);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--rojo-tinto);
+}
+
+/* Línea animada debajo de los links */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--rojo-tinto);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background: var(--rojo-tinto);
+}
+
+/* --- HERO SECTION (Banner Visual) --- */
+.hero {
+    /* Imagen de fondo desde Unsplash simulando el café */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    background-color: var(--dorado);
+    color: var(--texto);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #ffd700;
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* --- CATÁLOGO DE PRODUCTOS --- */
+.contenedor {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: var(--rojo-tinto);
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.img-producto {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.info-producto {
+    padding: 20px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background-color: var(--rojo-tinto);
+    color: var(--blanco);
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: var(--dorado);
+    color: var(--texto);
+}
+
+/* Efecto clic en los botones (esto hace que "sirvan") */
+.btn-comprar:active, .btn-hero:active, .btn-login:active {
+    transform: scale(0.95);
+}
+
+footer {
+    background-color: var(--rojo-tinto);
+    color: var(--blanco);
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
